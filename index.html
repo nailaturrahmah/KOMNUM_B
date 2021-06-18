@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+
+
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>KOMNUM_B</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">18_078_NAILATUR ROHMAH_KOMNUM_B</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+
+            <li class="nav-item" data-level="2"><a href="#integrasi-numerik" class="nav-link">Integrasi Numerik</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#Numerical Solution of System of Linear Algebraic Equations" class="nav-link">Numerical Solution of System of Linear Algebraic Equations</a>
+                <ul class="nav flex-column">
+                </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#Numerical Solutions of Ordinary Differential Equations" class="nav-link">Numerical Solutions of Ordinary Differential Equations</a>
+                <ul class="nav flex-column">
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="integrasi-numerik"><strong>Integrasi Numerik</strong></h2>
+<p>Metode integrasi numerik** adalah  cara perhitungan yang dimana menghitung aproksimasi luas daerah di bawah fungsi yang akan dimaksud pada selang yang tidak tentu atau yang diberikan.</p>
+<p>Perhitungan nilai Integral-TentuI=∫abf(x)dx yang dalam hal ini :</p>
+<p>-a dan b merupakan batas batas dari  integrasi sendiri</p>
+<p>-f ialah fungsi yang dapat diberikan secara eksplisit didalam bentuk persamaan maupun secara empirik dalam bentuk tabel nilai.</p>
+<ol>
+<li>Berikut contoh Integral fungsi eksplisit: ∫02(6(x)3−x2+cos(x)−ex)dx</li>
+<li>Dan berikut contoh integral didalam bentuk tabel atau fungsi implisit:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>f(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.00</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>0.25</td>
+<td>7.5</td>
+</tr>
+<tr>
+<td>0.50</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>0.75</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>1.00</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<p>Dan berikut ini  beberapa metode integrasi numerik yang bisa di katakan cukup sering digunakan:</p>
+<ul>
+<li>Metode Euler Eksplisit</li>
+</ul>
+<p>Adalah suatu metode yang dimana metode inibisa dikatakan  terbilang metode yang bisaa dikatakan paling mudah. xk-1= Axk-1 + Buk-1 = f(xk-1, uk-1)</p>
+<p><img alt="{\displaystyle {\dot {x}}_{k-1}=Ax_{k-1}+Bu_{k-1}=f(x_{k-1},u_{k-1})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce179f1ee061e052f254a491a9dbe7512e364d41" /></p>
+<ul>
+<li>Metode Euler Implisit</li>
+</ul>
+<p><img alt="{\displaystyle {\dot {x}}_{k-1}=Ax_{k}+Bu_{k}=f(x_{k},u_{k})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5dc9446a2dc4b9560f842c945741e093ced41643" /></p>
+<p>Berikutnya metode ini sendiri merupakan suatu nilai aktualnya terdiri dari <img alt="{\displaystyle x_{k}}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6d2b88c64c76a03611549fb9b4cf4ed060b56002" /> dan juga dapat digunakan sebagai umpan balik. Yang dimana umpan balik ini sendiri di usahakan dapat dan mampu menyebabkan terjadinya suatu lingkaran aljabar tersebut. Maka dari itulah didalam  menghindarinya maka di bentuk persamaan yang mampu seperti  rumus di bawah ini.</p>
+<p><img alt="{\displaystyle {\dot {x}}_{k}=Ax_{k-1}+Bu_{k}=f(x_{k-1},u_{k})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5e3797b09546e064dff2182315ffc4915e583573" /></p>
+<p>J ialah matriks Jacobi. Di dalam sistem linear dan invarian terhadap waktu, maka dari itu matriks J = A</p>
+<ul>
+<li>Metode Heun</li>
+</ul>
+<p>Disini metode ini sendiri memerlukan dua masukan antara lain <img alt="{\displaystyle u_{k}}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9837644700489d04d977da272524cd5fda36f3d7" />dan <img alt="{\displaystyle u_{k-1}}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3ab4fbdd181a4697fd87bb4b73926d99b1bc8d59" /></p>
+<p><img alt="{\displaystyle {\dot {x}}_{k-1}=Ax_{k-1}+Bu_{k-1}=f(x_{k-1},u_{k-1})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce179f1ee061e052f254a491a9dbe7512e364d41" /></p>
+<p><img alt="{\displaystyle {\dot {x}}_{k}^{p}=f(x_{k}^{p},u_{k})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a820e9bf3ffa92a3753fafa5880a3160335cfa27" /></p>
+<p><img alt="{\displaystyle x_{k}=x_{k-1}+{h \over 2}({\dot {x}}_{k-1}+{\dot {x}}_{k}^{p})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7fa4aab434af5944e0dd7aefe53bc6f90d80517e" /></p>
+<p>​</p>
+<ul>
+<li>Metode Runge-Kutta</li>
+</ul>
+<p>Adalah metode yangdi peroleh terdiri dengan empat masukan.</p>
+<p><img alt="{\displaystyle {\dot {x}}_{k-1}=Ax_{k-1}+Bu_{k-1}=f(x_{k-1},u_{k-1})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce179f1ee061e052f254a491a9dbe7512e364d41" /></p>
+<p><img alt="{\displaystyle {\dot {x}}_{k-0.5}^{p1}=f(x_{k-0.5}^{p1},u_{k-0.5})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/280f617f3e84dd807d202a2226a4daf2c5018e22" /></p>
+<p><img alt="{\displaystyle {\dot {x}}_{k-0.5}^{p2}=f(x_{k-0.5}^{p2},u_{k-0.5})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/382b9580ac0ed989755a6bf13a98f6173f47e8ed" /></p>
+<p><img alt="{\displaystyle {\dot {x}}_{k}^{p3}=f(x_{k}^{p3},u_{k})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e6fdc1ddc1e929c5e1ae7a70f2f49cdfe9c69379" /></p>
+<p><img alt="{\displaystyle x_{k}=x_{k-1}+{h \over 6}({\dot {x}}_{k-1}+2{\dot {x}}_{k-0.5}^{p1}+2{\dot {x}}_{k-0.5}^{p2}+{\dot {x}}_{k}^{p3})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0389ac3fd60b7f9113005ab609caa69cf1bad324" /></p>
+<ul>
+<li>Metode Trapesium (Trapez)</li>
+</ul>
+<p>Ialah nilai pada bagian tengah dari kedusa metode diatas. Sama halnya dengan metode Euler implisit, metodeini dapat menyebabkan sebuah lingkaran aljabar. Maka dari itu, bentuk persamaan ini diubah menjadi seperti ini.</p>
+<p><img alt="{\displaystyle x_{k}=x_{k-1}+{h \over 2}({\dot {x}}_{k}+{\dot {x}}_{k+1})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c64069d0a7d341e11390cac1178b5856af6d7a09" /></p>
+<ul>
+<li>Metode Newton–Cotes</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Nomor</th>
+<th>Nama Aturannya</th>
+<th>Rumuss</th>
+<th>Estimasi dari Kesalahan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Trapesium</td>
+<td><img alt="{\displaystyle {\frac {b-a}{2}}(f_{0}+f_{1})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/898874be93dd6abb959fcbef070b3ddcb08c96f9" /></td>
+<td>{<img alt="{\displaystyle -{\frac {(b-a)^{3}}{12}}\,f^{(2)}(\xi )}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/832a38281b02d44403f66937c749653209eefe07" /></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Simpson 1/3</td>
+<td><img alt="{\displaystyle {\frac {b-a}{3}}(f_{0}+4f_{1}+f{2})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f0e59bd2336d992fca79d6bc72be3cc75f59a350" /></td>
+<td><img alt="{\displaystyle -{\frac {(b-a)^{5}}{90}}\,f^{(4)}(\xi )}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e6c3700425a20e7b2f6975207f689fd8cc139d09" /></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Simpson 3/8</td>
+<td><img alt="{\displaystyle {\frac {3(b-a)}{8}}(f_{0}+3f_{1}+3f_{2}+f_{3})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7142aae98d40aa460f706fb825531ff99883d5c1" /></td>
+<td><img alt="{\displaystyle -{\frac {3(b-a)^{5}}{80}}\,f^{(4)}(\xi )}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ed57b1cd5a2f3daf1500910afccd87ae7669db95" /></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Boole atau Bode</td>
+<td><img alt="{\displaystyle {\frac {2(b-a)}{45}}(7f_{0}+32f_{1}+12f_{2}+32f_{3}+7f_{4})}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0aac892bb48dad85a8538d2b1f4006bf0dff2cf9" /></td>
+<td><img alt="{\displaystyle -{\frac {8(b-a)^{7}}{945}}\,f^{(6)}(\xi )}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0299d1ce872031ad9c7295e7a769c100d4c8d57e" /></td>
+</tr>
+</tbody>
+</table>
+<p>Dapat dilihat di tabel di atas di situ sudah ada rumus serta aturan nama dan juga estimasi  kesalahannya yang dimana di jadikan satu di dalam metode Newton-Contes . Dan Newton-Contes sendiri ialah metode yang terdiri dari rumus yg beda serta aturan yang berbedaa dan juga estimasi kesalahannya juga berbeda. Metode Newton-Cotes terdiri dari 4 nama aturan antara lain Trapesium, Simpson 1/3, Simpson 3/8, dan yang terakhir boole atau bode.</p>
+<p><strong>Berikut ini merupakan program atau code dari metode traapezoid.</strong></p>
+<pre><code># Trapezoid Method
+
+\# Define function to integrate
+def f(x):
+    return 1/(1 + x**2)
+\# Implementing trapezoid method
+def trapezoid(x0,xn,n):
+    \# calculating step size
+    h = (xn - x0) / n
+    \# Finding sum
+    integration = f(x0) + f(xn)
+    for i in range(1,n):
+        k = x0 + i*h
+        integration = integration + 2 * f(k)
+    \# Finding final integration value
+    integration = integration * h/2
+    return integration
+\# Input section
+lower_limit = float(input(&quot;Masukkan batas bawah integrasi: &quot;))
+upper_limit = float(input(&quot;Masukkan batas atas integrasi: &quot;))
+sub_interval = int(input(&quot;Masukkan jumlah sub interval: &quot;))
+\# Call trapezoid() method and get result
+result = trapezoid(lower_limit, upper_limit, sub_interval)
+print(&quot;Hasil integrasi dengan metode Trapesium adalah: %0.6f&quot; % (result) )
+</code></pre>
+<p>Hasil running program</p>
+<pre><code>Masukkan batas bawah integrasi: 32
+Masukkan batas atas integrasi: 23
+Masukkan jumlah sub interval: 21
+Hasil integrasi dengan metode Trapesium adalah: -0.012213
+
+
+</code></pre>
+<p><strong>Numerical Solution of System of Linear Algebraic Equations</strong></p>
+<p>​   Sistempersamaan aljabar linier (SLAEs)dipertimbangkandalam pekerjaanya. Apabila matriks tersebut menggunakan suatu sistem ialah nonsingular, maka solusi unik yang di ambil dari sistem tersebut ialah ada. Di dalam kasus tunggal ini, suatu sistem sendiri tidak dapat memiliki solusi atau pun solusi tak terhingga. Oleh sebab itu dalam hal ini, gagasan solusi normal yang akan diperkenalkan. Kita ambil kasus matriks bujur sangkar nonsingular yang secara teoritis dapat terbilang dianggap baik dalam artian keberadaanserta keunikan solusi. Akan tetapi, dalam teori metode komputasidisini, matriks nonsingular sendiri dibagi menjadi dua kategori antara lain: matriks berkondisi buruk dan juga berkondisi baik. </p>
+<p>​   Suatu matriks berkondisiburuk apabila solusi sistem persamaan praktis tidakstabil. Karakteristik penting dari stabilitas nya sendiri dari solusi praktis untuk sistem persamaanlinier ialah bilangan kondisi. Metode regularisasi sendiri biasanya diterapkan agar mendapatkan solusi yang andal. Strategi ini umumnya ialah denganmenggunakan penstabil Tikhonov atau biasa disebutmodifikasinya untuk merepresentasikan solusi yang dimana diperlukan sebagai jumlah ortogonal daridua vektor yang terdapatsatu vektornya yang dimana ditentukan secara stabil, sementara mencariyang kedua diperlukanprosedur stabilisasi. Metode iniberguna untukmenyelesaikan secara numerik SLAE dengan matriks simetris pasti positif ataupun matriks jenis osilasi menggunakanregularisasi yangadipertimbangkan dalampekerjaan ini, yang kan mengarah ke SLAE dengan jumlah kondisi yangdikurangitersebut.</p>
+<p><strong>Numerical Solutions of Ordinary Differential Equations</strong> </p>
+<p>Metode numerik untuk persamaan diferensial inibiasa suatu metode yang dimana penggunaannya untuk menemukan pendekatan numerik dan juga untuk solusi persamaandiferensial biasa (ODE). Penggunaannya bisa juga dikenal dengan sebutan" integrasinumerik ", meskipun dibilang istilah ini juga dapat merujukpada suatu perhitungan integral.</p>
+<p><img alt="img" src="01.PNG" /></p>
+<p><img alt="img" src="02.PNG" />Ilustrasiintegrasi numerik untuk persamaan diferensial Biru: metode Euler , hijau: metode titik tengah , merah:solusi eksak,<img alt="img" src="03.PNG" /> . Ukuran langkah adalahIlustrasi yang sama untuk <p><img alt="img" src="10.PNG" /></p><p><img alt="img" src="04.PNG" /></p>
+<p>Ilustrasi yang sama untuk <img alt="img" src="05.PNG" /></p> Metode titik tengah konvergen lebih cepatdaripada metode Euler, karena <img alt="img" src="06.PNG" />.</p>
+<p>Terbilang banyak persamaan diferensial yang tidak dapatdiselesaikan dengan menggunakan perhitungansimbolis (analisis). Akan tetapi, dalam tujuan praktis seperti ini didalam bidang teknik – pendekatan numerik terhadap solusi bisa dibilangseringkali cukup. Algoritma itu belajar di sini mampu digunakan untukmenghitung perkiraan yang terbilang seperti itu. Dalam metode alternatif ialah denganmenggunakan teknik dari kalkulus kenapa demikian agar untuk mendapatkan solusi perluasan deret .</p>
+<p>Di dalam persamaan diferensial ordepertama ini adalah masalah nilaiawal (IVP) dalam bentuk seperti ini, yang dimana <img alt="img" src="07.PNG" />  adalah fungsi <img alt="img" src="07.PNG" />, dan kondisiawal <img alt="img" src="09.PNG" />ialah vektoryang dimana diberikan. Oleh karena itu orde pertama berarti bahwa hanya turunanpertama dari y lah  yang akan munculdalam persamaan, dan juga turunan yang lebih tinggi tidak ada.</p>
+<p>Tanpa harus  kehilangan sifat umum untuk sistem ordetinggi, disini bisa dapat membatasi diri pada persamaan diferensial ordepertama , karena ODE orde tinggi dapat diubah menjadi sistem persamaan ordepertama yang lebih besar dengan memasukkan variabel tambahan. Misalnya,persamaan orde kedua y = y dapat ditulis ulang menjadi dua persamaan ordepertama: y = z dan z = y </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2021-06-18 07:55:27.120205+00:00
+-->
